@@ -8,11 +8,11 @@ namespace GeometriskaFigurer
 {
     class Ellipse : Shape
     {
-        public double Area { get; }     //Ska ange ellipsens area
+        public override double Area { get { return Area; } }     //Ska ange ellipsens area
 
-        public double Perimeter { get; }    //ska ange ellipsens omkrets
+        public override double Perimeter { get { return Perimeter; } }    //ska ange ellipsens omkrets
 
-        public Ellipse(double length, double width      //kallar på konstruktorn från basklassen Shape
+        public Ellipse(double length, double width)      //kallar på konstruktorn från basklassen Shape
             : base(length, width)
         {
 

@@ -8,9 +8,9 @@ namespace GeometriskaFigurer
 {
     class Rectangle : Shape
     {
-        public double Area { get; }
+        public override double Area { get { return Area; } }
 
-        public double Perimeter { get; }
+        public override double Perimeter { get { return Perimeter; } }
 
         public Rectangle(double length, double width) //Kallar på basklassens konstruktor
             :base (length, width){}
