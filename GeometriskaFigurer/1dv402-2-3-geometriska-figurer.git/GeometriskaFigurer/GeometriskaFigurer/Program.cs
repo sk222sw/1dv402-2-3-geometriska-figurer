@@ -15,14 +15,19 @@ namespace GeometriskaFigurer
         }
         static void Main(string[] args)
         {
+            double length;
+            double width;
+            int menuChoice;
 
-            
             ViewMenu();
 
-            double length = ReadDoubleGreaterThanZero("Ange längden: ");
-            double width = ReadDoubleGreaterThanZero("Ange bredden: ");
+            ShapeType shape = ReadDoubleGreaterThanZero("Ange menyval [0-2]");
+            Console.WriteLine();
+            length = ReadDoubleGreaterThanZero("Ange längden: ");
+            width = ReadDoubleGreaterThanZero("Ange bredden: ");
 
-            Console.WriteLine(length * width);
+            Shape Shape = new Ellipse(length, width);
+
 
 
         }
@@ -85,5 +90,21 @@ namespace GeometriskaFigurer
             Console.WriteLine();
         }
 
+        private static void ViewShapeDetail(Shape shape)
+        {
+            
+            Console.BackgroundColor = ConsoleColor.DarkGreen;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~");
+            Console.WriteLine("~\t     Detaljer     \t~");
+            Console.WriteLine("~._._._._._._._._._._._._._._._.~");
+            Console.ResetColor();
+            Console.WriteLine();
+            
+            
+
+            Console.WriteLine();
+            Console.WriteLine("=================================");
+        }
     }
 }
