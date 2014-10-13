@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace GeometriskaFigurer
 {
-    class Ellipse
+    class Ellipse : Shape
     {
+        public double Area { get; }     //Ska ange ellipsens area
+
+        public double Perimeter { get; }    //ska ange ellipsens omkrets
+
+        public Ellipse(double length, double width      //kallar på konstruktorn från basklassen Shape
+            : base(length, width)
+        {
+
+        }
     }
 }

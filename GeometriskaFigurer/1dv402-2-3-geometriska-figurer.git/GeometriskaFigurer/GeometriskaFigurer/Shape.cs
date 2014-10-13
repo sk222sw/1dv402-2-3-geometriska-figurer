@@ -11,7 +11,7 @@ namespace GeometriskaFigurer
         private double _length;     //representerar en figurs längd.
         private double _width;      //representerar en figurs bredd.
 
-        public double Area { get; } //representerar en figurs area
+        public abstract double Area { get; } //representerar en figurs area
 
         public double Length        //kapslar in _length
         {
@@ -27,7 +27,7 @@ namespace GeometriskaFigurer
             }    //set kastar undantag om värdet är mindre än 0.
         }
 
-        public double Perimeter { get; }    //representerar en figurs omkrets.
+        public abstract double Perimeter { get; }    //representerar en figurs omkrets.
 
         public double Width
         {
