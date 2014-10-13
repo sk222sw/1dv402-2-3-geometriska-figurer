@@ -16,6 +16,8 @@ namespace GeometriskaFigurer
         static void Main(string[] args)
         {
 
+            
+            ViewMenu();
 
             double length = ReadDoubleGreaterThanZero("Ange längden: ");
             double width = ReadDoubleGreaterThanZero("Ange bredden: ");
@@ -64,7 +66,24 @@ namespace GeometriskaFigurer
             return userInput;
         }
 
-
+        private static void ViewMenu()
+        {
+            Console.BackgroundColor = ConsoleColor.DarkGreen;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~");
+            Console.WriteLine("~\t\t\t\t~");
+            Console.WriteLine("~\tGeometriska figurer\t~");
+            Console.WriteLine("~\t\t\t\t~");
+            Console.WriteLine("~._._._._._._._._._._._._._._._.~");
+            Console.ResetColor();
+            Console.WriteLine();
+            Console.WriteLine("0. Avsluta.");
+            Console.WriteLine("1. Ellips.");
+            Console.WriteLine("2. Rektangel.");
+            Console.WriteLine();
+            Console.WriteLine("=================================");
+            Console.WriteLine();
+        }
 
     }
 }
