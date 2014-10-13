@@ -1,0 +1,6 @@
+P:\1dv402-2-3-geometriska-figurer\GeometriskaFigurer\1dv402-2-3-geometriska-figurer.git\GeometriskaFigurer\GeometriskaFigurer\bin\Debug\GeometriskaFigurer.exe.config
+P:\1dv402-2-3-geometriska-figurer\GeometriskaFigurer\1dv402-2-3-geometriska-figurer.git\GeometriskaFigurer\GeometriskaFigurer\bin\Debug\GeometriskaFigurer.exe
+P:\1dv402-2-3-geometriska-figurer\GeometriskaFigurer\1dv402-2-3-geometriska-figurer.git\GeometriskaFigurer\GeometriskaFigurer\bin\Debug\GeometriskaFigurer.pdb
+P:\1dv402-2-3-geometriska-figurer\GeometriskaFigurer\1dv402-2-3-geometriska-figurer.git\GeometriskaFigurer\GeometriskaFigurer\obj\Debug\GeometriskaFigurer.csprojResolveAssemblyReference.cache
+P:\1dv402-2-3-geometriska-figurer\GeometriskaFigurer\1dv402-2-3-geometriska-figurer.git\GeometriskaFigurer\GeometriskaFigurer\obj\Debug\GeometriskaFigurer.exe
+P:\1dv402-2-3-geometriska-figurer\GeometriskaFigurer\1dv402-2-3-geometriska-figurer.git\GeometriskaFigurer\GeometriskaFigurer\obj\Debug\GeometriskaFigurer.pdb

@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace GeometriskaFigurer
 {
-    class Program
+    class Ellipse
     {
-        static void Main(string[] args)
-        {
-
-        }
     }
 }

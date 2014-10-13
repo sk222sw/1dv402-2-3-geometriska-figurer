@@ -1,0 +1,98 @@
+10
+
+dir
+0
+https://github.com/sk222sw/1dv402-2-3-geometriska-figurer.git/GeometriskaFigurer/GeometriskaFigurer
+https://github.com/sk222sw/1dv402-2-3-geometriska-figurer.git
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+d7db3360-45ab-4678-04d9-ce57b7db7bff
+
+ClassDiagram1.cd
+file
+
+
+
+add
+
+Ellipse.cs
+file
+
+
+
+add
+
+App.config
+file
+
+
+
+add
+
+Shape.cs
+file
+
+
+
+add
+
+bin
+dir
+
+
+
+add
+
+Rectangle.cs
+file
+
+
+
+add
+
+obj
+dir
+
+
+
+add
+
+Program.cs
+file
+
+
+
+add
+
+Properties
+dir
+
+
+
+add
+
+GeometriskaFigurer.csproj
+file
+
+
+
+add
+
