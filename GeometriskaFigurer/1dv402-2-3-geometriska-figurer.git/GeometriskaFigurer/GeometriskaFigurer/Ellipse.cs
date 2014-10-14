@@ -8,9 +8,9 @@ namespace GeometriskaFigurer
 {
     class Ellipse : Shape
     {
-        public double Area { get { return (Math.PI * (Length / 2) * (Width / 2)); } }     //Ska ange ellipsens area       //Override?
+        public override double Area { get { return (Math.PI * (Length / 2) * (Width / 2)); } }     //Ska ange ellipsens area       //Override?
 
-        public double Perimeter { get { return Math.PI * Math.Sqrt((2 * Length * Length) + (2 * Width * Width)); } }    //ska ange ellipsens omkrets       //Override?
+        public override double Perimeter { get { return Math.PI * Math.Sqrt((2 * Length * Length) + (2 * Width * Width)); } }    //ska ange ellipsens omkrets       //Override?
 
         public Ellipse(double length, double width)      //kallar på konstruktorn från basklassen Shape
             : base(length, width)

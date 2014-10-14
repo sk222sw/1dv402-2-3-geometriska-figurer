@@ -6,38 +6,78 @@ using System.Threading.Tasks;
 
 namespace GeometriskaFigurer
 {
+    enum ShapeType
+    {
+        Ellipse = 1,
+        Rectangle,
+    }
+
     class Program
     {
-        enum ShapeType
-        { 
-            Ellipse = 0,
-            Rectangle,
-        }
+
         static void Main(string[] args)
         {
-            double length;
-            double width;
-            int menuChoice;
-
-            ViewMenu();
-
-            ShapeType shape = ReadDoubleGreaterThanZero("Ange menyval [0-2]");
-            Console.WriteLine();
-            length = ReadDoubleGreaterThanZero("Ange längden: ");
-            width = ReadDoubleGreaterThanZero("Ange bredden: ");
-
-            Shape Shape = new Ellipse(length, width);
+            ViewMenu();  //1 - Visa menu och gör val
 
 
+            int menuChoice = int.Parse(Console.ReadLine());
+            switch (menuChoice)
+            {
+                case 0:
+                    return;
+                case 1:
+                    ViewShapeDetail(CreateShape(ShapeType.Ellipse));
+                    break;
+                case 2:
+                    ViewShapeDetail(CreateShape(ShapeType.Rectangle));
+                    break;
+            }
 
         }
 
-        //private static Shape CreateShape(ShapeType shapetype)
-        //{
+        private static Shape CreateShape(ShapeType shapeType)
+        {
 
-        //    Shape = Ellipse;
 
-        //}
+            Console.Clear();
+            switch (shapeType)
+            {
+                case ShapeType.Ellipse:
+                    Console.BackgroundColor = ConsoleColor.DarkGreen;
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~");
+                    Console.WriteLine("~\t     Ellipse      \t~");
+                    Console.WriteLine("~._._._._._._._._._._._._._._._.~");
+                    Console.ResetColor();
+                    Console.WriteLine();
+                    break;
+                case ShapeType.Rectangle:
+                    Console.BackgroundColor = ConsoleColor.DarkGreen;
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~");
+                    Console.WriteLine("~\t    Rektangel   \t~");
+                    Console.WriteLine("~._._._._._._._._._._._._._._._.~");
+                    Console.ResetColor();
+                    Console.WriteLine();
+                    break;
+            }
+
+            double length = ReadDoubleGreaterThanZero("Ange längden: ");
+            double width = ReadDoubleGreaterThanZero("Ange bredden: ");
+
+            Console.Clear();
+            if (shapeType == ShapeType.Ellipse)
+            {
+                Shape ellipse = new Ellipse(length, width);
+                return ellipse;
+            }
+            else
+            {
+                Shape rectangle = new Rectangle(length, width);
+                return rectangle;
+            }
+
+        }
 
         private static double ReadDoubleGreaterThanZero(string prompt)
         {

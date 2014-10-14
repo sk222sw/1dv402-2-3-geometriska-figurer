@@ -5,15 +5,8 @@
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
-    <NestedTypes>
-      <Enum Name="GeometriskaFigurer.Program.ShapeType">
-        <TypeIdentifier>
-          <NewMemberFileName>Program.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAA=</HashCode>
+      <HashCode>AAAGAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAQBAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
