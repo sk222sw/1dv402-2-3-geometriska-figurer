@@ -17,21 +17,54 @@ namespace GeometriskaFigurer
 
         static void Main(string[] args)
         {
-            ViewMenu();  //1 - Visa menu och gör val
 
+            do
+	        {
 
-            int menuChoice = int.Parse(Console.ReadLine());
-            switch (menuChoice)
-            {
-                case 0:
-                    return;
-                case 1:
-                    ViewShapeDetail(CreateShape(ShapeType.Ellipse));
-                    break;
-                case 2:
-                    ViewShapeDetail(CreateShape(ShapeType.Rectangle));
-                    break;
-            }
+                ViewMenu();  //1 - Visa menu och gör val
+                int menuChoice;
+                try
+                {
+                    
+                    menuChoice = int.Parse(Console.ReadLine());
+                    switch (menuChoice)
+                    {
+                        case 0:
+                            return;
+                        case 1:
+                            ViewShapeDetail(CreateShape(ShapeType.Ellipse));
+                            break;
+                        case 2:
+                            ViewShapeDetail(CreateShape(ShapeType.Rectangle));
+                            break;
+                    }
+                    if (menuChoice > -1 && menuChoice < 3)
+                    {
+                        break;
+                    }
+                    else
+                    { 
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.WriteLine("Fel! Det måste vara ett flyttal större än 0.");
+                        Console.WriteLine();
+                        Console.BackgroundColor = ConsoleColor.DarkBlue;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.WriteLine("Tryck för att köra igen - Esc avslutar");
+                        Console.ResetColor();
+                    }
+
+                }
+                catch
+                {
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Fel! Det måste vara ett flyttal större än 0.");
+                    Console.ResetColor();
+                }
+
+ 
+            } while (Console.ReadKey(true).Key != ConsoleKey.Escape);
 
         }
 
@@ -81,14 +114,15 @@ namespace GeometriskaFigurer
 
         private static double ReadDoubleGreaterThanZero(string prompt)
         {
-            double userInput = 0;
+            double userInput;
             while (true)
             {
+                Console.WriteLine(prompt);
+
+
                 try
                 {
-                    Console.WriteLine(prompt);
                     userInput = double.Parse(Console.ReadLine());
-
                     if (userInput > 0)
                     {
                         break;
@@ -113,6 +147,7 @@ namespace GeometriskaFigurer
 
         private static void ViewMenu()
         {
+            Console.Clear();
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~¨~");
@@ -139,12 +174,16 @@ namespace GeometriskaFigurer
             Console.WriteLine("~\t     Detaljer     \t~");
             Console.WriteLine("~._._._._._._._._._._._._._._._.~");
             Console.ResetColor();
-            Console.WriteLine();
-            
-            
+
+            Console.WriteLine(shape.ToString());
 
             Console.WriteLine();
-            Console.WriteLine("=================================");
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Tryck för att köra igen - Esc avslutar");
+            Console.ResetColor();
+            Console.WriteLine();
+
         }
     }
 }

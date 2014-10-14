@@ -54,7 +54,7 @@ namespace GeometriskaFigurer
             //sträng representerande värdet av en instans. Strängen ska vara lite speciellt formaterad och på separata 
             //rader innehålla ledtext och värde för figurens läng, bredd, omkrets och area.
 
-            return string.Format("Längd  :\t{0}\nBredd  :\t{1}Width\nOmkrets:\t{2}Perimeter\nArea   :\t{3}",
+            return string.Format("Längd  :\t{0}\nBredd  :\t{1}\nOmkrets:\t{2}\nArea   :\t{3}",
                 Length, Width, Perimeter, Area);
         }
    } 
