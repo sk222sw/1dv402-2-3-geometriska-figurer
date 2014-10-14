@@ -53,8 +53,9 @@ namespace GeometriskaFigurer
             //Metoden ska returnera en 
             //sträng representerande värdet av en instans. Strängen ska vara lite speciellt formaterad och på separata 
             //rader innehålla ledtext och värde för figurens läng, bredd, omkrets och area.
-            string hej = "hej";
-            return hej;
+
+            return string.Format("Längd  :\t{0}\nBredd  :\t{1}Width\nOmkrets:\t{2}Perimeter\nArea   :\t{3}",
+                Length, Width, Perimeter, Area);
         }
    } 
 }
